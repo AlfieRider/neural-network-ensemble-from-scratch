@@ -20,13 +20,14 @@ A very simple procedure of:
 - Hidden layer/s: perform the most computational work; can have 1/n of these layers. Neurons tranform inputs to usable data for the output layer.
 - Output layer: final layer providing the model's output. The format of such varies based on the task (e.g. classification, regression).
 
-## Workign of Neural Networks:
-1. Forward Propagation:
-    This is when the data is input; data passes through the network in the forward direction (In->Hidden->Out).
-> 1.1. Linear Transformation; each neuron in the layer recieves inputs, multiplied by associated connection's weights. These products are arithmetically summed, with a bias added on at the end.
-> `z = w1x1 + w2x2 + ... + wnxn + b`; w = weight, x = input, b = bias.
-
->  1.2. Activation; result of linear transformation (z - see above) is passed through this activation function, which introduces non-linearity into the system, thus the network can learn more complex patterns.
+## Working of Neural Networks:
+### 1. Forward Propagation:
+This is when the data is input; data passes through the network in the forward direction (In->Hidden->Out).
+1.1. Linear Transformation; each neuron in the layer recieves inputs, multiplied by associated connection's weights. These products are arithmetically summed, with a bias added on at the end.
+```
+z = w1x1 + w2x2 + ... + wnxn + b`; w = weight, x = input, b = bias
+```
+1.2. Activation; result of linear transformation (z - see above) is passed through this activation function, which introduces non-linearity into the system, thus the network can learn more complex patterns.
 > E.g: ReLU, sigmoid, tanh.
 
-3. Backpropagation:
+### 2. Backpropagation:
