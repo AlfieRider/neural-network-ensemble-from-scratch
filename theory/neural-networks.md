@@ -23,6 +23,7 @@ A very simple procedure of:
 ## Working of Neural Networks:
 ### 1. Forward Propagation:
 This is when the data is input; data passes through the network in the forward direction (In->Hidden->Out).
+
 1.1. Linear Transformation; each neuron in the layer recieves inputs, multiplied by associated connection's weights. These products are arithmetically summed, with a bias added on at the end.
 ```
 z = w1x1 + w2x2 + ... + wnxn + b`; w = weight, x = input, b = bias
