@@ -26,7 +26,8 @@ This is when the data is input; data passes through the network in the forward d
 
 1.1. Linear Transformation; each neuron in the layer recieves inputs, multiplied by associated connection's weights. These products are arithmetically summed, with a bias added on at the end.
 ```
-z = w1x1 + w2x2 + ... + wnxn + b ```
+z = w1x1 + w2x2 + ... + wnxn + b 
+```
 ^^^ w = weight, x = input, b = bias
 
 1.2. Activation; result of linear transformation (z - see above) is passed through this activation function, which introduces non-linearity into the system, thus the network can learn more complex patterns.
