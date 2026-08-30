@@ -34,3 +34,7 @@ z = w1x1 + w2x2 + ... + wnxn + b
 > E.g: ReLU, sigmoid, tanh.
 
 ### 2. Backpropagation:
+Comes after forward propagation; the network evaluates its performance using a loss function, which is used to measure the specifically the difference between the actual output and the predicted output. Training aims to minimise this loss.
+- Loss Calculation: the network calculates the loss, providing a measure of error in the predictions. The loss function could also vary; common choices include mean squared error (for regression tasks) or cross-entropy loss (for classification).
+- Gradient Calculation: Network computes gradients of the loss function with respect to network weight and network bias. Involves applying the chain rule to determine how much each part of the output error can be attributed to each weight and bias.
+- Weight update: post-gradient calculation, the weights and biases are updated via an optimisation algorithm (e.g. SGD). The weights are adjusted in the opposite direction of the gradient to minimise the loss. The size of the step taken in each update is determined by the learning rate.
