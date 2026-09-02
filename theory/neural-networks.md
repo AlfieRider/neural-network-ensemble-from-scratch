@@ -1,6 +1,6 @@
 ## What is a Neural Network?
 - ML models made to mimic human brain function.
-- Models usually consist of connected nodes which process data in such a way that pattern recognition is plausible, such that the patterns learnt aren't necessarily influenced by pre-set rules.
+- Models usually consist of connected nodes which process data in such a way that pattern recognition is plausible, such that the patterns learnt aren't necessarily influenced by pre-set rules. In other words, raw data is transformed into useful patterns, then used to make predictions in various contexts.
 
 ### Key Aspects:
 - Neurons: Node-equivalent. Recieve inputs. Each neuron is governed by a threshold and an activation function.
@@ -26,7 +26,7 @@ This is when the data is input; data passes through the network in the forward d
 
 1.1. Linear Transformation; each neuron in the layer recieves inputs, multiplied by associated connection's weights. These products are arithmetically summed, with a bias added on at the end.
 ```
-z = w1x1 + w2x2 + ... + wnxn + b 
+z = w<sub>1</sub>x<sub>1</sub> + w<sub>2</sub>x<sub>2</sub> + ... + w<sub>n</sub>x<sub>n</sub> + b 
 ```
 ^^^ w = weight, x = input, b = bias
 
@@ -38,6 +38,9 @@ Comes after forward propagation; the network evaluates its performance using a l
 - Loss Calculation: the network calculates the loss, providing a measure of error in the predictions. The loss function could also vary; common choices include mean squared error (for regression tasks) or cross-entropy loss (for classification).
 - Gradient Calculation: Network computes gradients of the loss function with respect to network weight and network bias. Involves applying the chain rule to determine how much each part of the output error can be attributed to each weight and bias.
 - Weight update: post-gradient calculation, the weights and biases are updated via an optimisation algorithm (e.g. SGD). The weights are adjusted in the opposite direction of the gradient to minimise the loss. The size of the step taken in each update is determined by the learning rate.
+
+3. Iteration:
+The above described process is repeated over many iterations over the entire dataset. This iteration in turn reduces the loss and the network's predictions become more accurate. Parameters can be adapted better to approximate relationships in the data, thus improving the overall performance for predictive modelling, etc.
 
 ## Sources:
 will format properly later...
