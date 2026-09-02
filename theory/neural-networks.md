@@ -26,7 +26,7 @@ This is when the data is input; data passes through the network in the forward d
 
 1.1. Linear Transformation; each neuron in the layer recieves inputs, multiplied by associated connection's weights. These products are arithmetically summed, with a bias added on at the end.
 ```
-z = w<sub>1</sub>x<sub>1</sub> + w<sub>2</sub>x<sub>2</sub> + ... + w<sub>n</sub>x<sub>n</sub> + b 
+z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b 
 ```
 ^^^ w = weight, x = input, b = bias
 
