@@ -1,13 +1,15 @@
 ## What is a Neural Network?
-- ML models made to mimic human brain function.
-- Models usually consist of connected nodes which process data in such a way that pattern recognition is plausible, such that the patterns learnt aren't necessarily influenced by pre-set rules. In other words, raw data is transformed into useful patterns, then used to make predictions in various contexts.
+- Machine Learning models composed of interconnected computational units. Loosely inspired by biological NN.
+- Takes raw data, and learns patterns/relationships from it, without explicit pre-programmed rules dictating these patterns.
+- Numerical parameters are adjusted to do this. These patterns, once learnt, can then be used to predict trends / make decisions on data.
+
+In other words, a NN learns a function which maps an input onto an output.
+```Input -> Neural Network -> Output```
+The NN's ability to actually perform this mapping is contributed to many factors, including its architecture, parameters, activation functions, and the training process itself.
 
 ### Key Aspects:
-- Neurons: Node-equivalent. Recieve inputs. Each neuron is governed by a threshold and an activation function.
-- Connections: Edge-equivalent. Links 2/+ nodes, and can carry information. Have weights and biases.
-- Weight and Biases: oversee strength and influence of connections.
-- Propagation Functions: Aid in processing and transferring data across neuron layers.
-- Learning Rule: a method, such that weights and biases are adjusted over time to fit the desired result (improves accuracy).
+#### Neurons
+The fundamental computational units of a neural network.
 
 ### Learning:
 A very simple procedure of:
