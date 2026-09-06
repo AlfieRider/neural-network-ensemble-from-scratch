@@ -29,6 +29,20 @@ Variables of ^^^ equations:
 - `f` = activation function
 - `a` = neuron output
 
+#### Connections:
+- Link neurons between layers, allowing output of one neuron to become input of another neuron.
+- Associated with weights, used to determine the strength and influence of an output.
+
+#### Weights and Biases:
+- The primary learnable parameters (i.e. change automatically during training for learning; improves performance).
+- `Weights`: determine how strongly an input contributes to a neuron's output.
+- `Biases`: provide an additional adjustable value, such that a neuron can shift its response independently of its inputs.
+
+#### Activation Functions:
+- Determines how a neuron's weighted input is transformed before being passed onward.
+- Common examples: ReLU, Sigmoid, Tanh.
+- Introduce non-linearity into the network; can learn relationships that cannot be linearly represented. (by a linear model)
+
 ### Learning:
 A very simple procedure of:
 1. Feed data into network
