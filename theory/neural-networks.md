@@ -4,7 +4,9 @@
 - Numerical parameters are adjusted to do this. These patterns, once learnt, can then be used to predict trends / make decisions on data.
 
 In other words, a NN learns a function which maps an input onto an output.
+
 ```Input -> Neural Network -> Output```
+
 The NN's ability to actually perform this mapping is contributed to many factors, including its architecture, parameters, activation functions, and the training process itself.
 
 ### Key Aspects:
