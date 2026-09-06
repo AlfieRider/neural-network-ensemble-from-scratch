@@ -61,12 +61,37 @@ A very simple procedure of:
 5. Network refines output by adjusting Ws and Bs such that performance is gradually improved.
 6. Iterate.
 
-`i.e. *Data -> Output -> Loss -> Gradients -> Param Update -> *` Iteratively.-
+`i.e. *Data -> Output -> Loss -> Gradients -> Param Update -> *` Iteratively.
 
 ## Layers in Neural Network Architecture:
-- Input layer: network recieves the input data, where each input neuron corresponds to a specific feature in the given input data.
-- Hidden layer/s: perform the most computational work; can have 1/n of these layers. Neurons tranform inputs to usable data for the output layer.
-- Output layer: final layer providing the model's output. The format of such varies based on the task (e.g. classification, regression).
+Each layer, consisting of neurons, transforms the representation of the data it recieves.
+
+'Input Layer -> Hidden Layer(s) -> Output Layer`
+
+### Input Layer:
+- Receives the original input data.
+- Each input value represents a feature of the input.
+
+Example:
+- A model receiving information about a house, with values such as:
+    - x₁: house size
+    - x₂: bedroom total number
+    - x₃: location
+- For image classification (woo!) the input features may represent pixels.
+
+### Hidden Layer(s):
+- Sit between the input and output layers.
+- Transform the representation of the input through successive (mathematical) operations. Can have 1/+ of these layers.
+- `Deep Neural Network`: when a neural network contains multiple layers of learned transformations.
+
+### Output Layer:
+- Produces the networks final output.
+- Format of such varies based on task itself.
+
+Examples:
+- `Binary Classification`: usually produces a single output representing one of two classes.
+- `Multi-class Classification`: usually produces an output corresponding to each possible class available.
+- `Regression`: produces 1/+ (one or more) continuous numerical values.
 
 ## Working of Neural Networks:
 ### 1. Forward Propagation:
