@@ -14,7 +14,9 @@ The fundamental computational units of a neural network.
 A neuron receives 1/+ (one or more) inputs, combining these using learned `Weights` and a `Bias`, passing the result through an `activation function`.
 
 Equations relating to neurons:
+
 ```z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b```
+
 ```a = f(z)```
 
 Variables of ^^^ equations:
