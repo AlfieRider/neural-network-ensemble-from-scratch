@@ -10,6 +10,7 @@ The NN's ability to actually perform this mapping is contributed to many factors
 ### Key Aspects:
 #### Neurons
 The fundamental computational units of a neural network.
+Text
 
 ### Learning:
 A very simple procedure of:
