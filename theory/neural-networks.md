@@ -43,11 +43,25 @@ Variables of ^^^ equations:
 - Common examples: ReLU, Sigmoid, Tanh.
 - Introduce non-linearity into the network; can learn relationships that cannot be linearly represented. (by a linear model)
 
+#### Propagation:
+- Information undertakes this process through the network as neurons perform their transformations.
+- `Forward Propagation`: information moves from `Input -> Output`.
+- `Backpropagation`: information about the error is propagated backward throughout the network; allows the network to determine how the parameters contributed to said error.
+
+#### Learning Rule:
+- Describes how parameters of the network are adjusted during training.
+- `Gradient-based optimisation`: most modern NNs use this; gradients of the loss, w.r.t the network's parameters, are used to determine how the parameters should change.
+
 ### Learning:
 A very simple procedure of:
-1. Feed data into network
+1. Feed training data into network
 2. Network generates an output based on current parameters.
-3. Network refines output by adjusting Ws and Bs such that performance is gradually improved.
+3. Determine how different current output is to desired output.
+4. Calculate how parameters contributed to this error
+5. Network refines output by adjusting Ws and Bs such that performance is gradually improved.
+6. Iterate.
+
+`i.e. *Data -> Output -> Loss -> Gradients -> Param Update -> *` Iteratively.-
 
 ## Layers in Neural Network Architecture:
 - Input layer: network recieves the input data, where each input neuron corresponds to a specific feature in the given input data.
