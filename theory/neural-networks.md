@@ -10,7 +10,20 @@ The NN's ability to actually perform this mapping is contributed to many factors
 ### Key Aspects:
 #### Neurons
 The fundamental computational units of a neural network.
-Text
+
+A neuron receives 1/+ (one or more) inputs, combining these using learned `Weights` and a `Bias`, passing the result through an `activation function`.
+
+Equations relating to neurons:
+```z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b```
+```a = f(z)```
+
+Variables of ^^^ equations:
+- `x` = input
+- `w` = weight
+- `b` = bias
+- `z` = weighted sum (prior activation). `see linear transformation`
+- `f` = activation function
+- `a` = neuron output
 
 ### Learning:
 A very simple procedure of:
