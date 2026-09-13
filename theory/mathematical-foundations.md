@@ -118,4 +118,84 @@ $$
 The above is another way of describing this vector's shape; 3 rows, 1 column.
 
 ## Row Vectors & Column Vectors:
+The distinction of row and column vectors are vital.
+
+Column Vector:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+2 \\
+3 \\
+5
+\end{bmatrix}
+$$
+
+Has shape:
+
+$$
+3 \times 1
+$$
+
+$$
+(3,1)
+$$
+
+Row Vector:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+2 & 3 & 5
+\end{bmatrix}
+$$
+
+Has shape:
+
+$$
+1 \times 3
+$$
+
+$$
+(1,3)
+$$
+
+These two examples contain identical values. However, the different orientation is a vital difference considered in performing matrix multiplication.
+
+## Transpose
+The transpose of a vector (or matrix) switches its rows and columns. The transpose is represented by superscript `T`.
+
+Example:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+2 \\
+3 \\
+5
+\end{bmatrix}
+$$
+
+has transpose:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+2 & 3 & 5
+\end{bmatrix}
+$$
+
+Thus the shape of the vector changes from:
+
+$$
+(3,1)
+$$
+
+to:
+
+$$
+(1,3)
+$$
+
+## Vector Addition:
 ...
