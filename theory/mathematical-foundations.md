@@ -408,4 +408,83 @@ $$
 Expect this notation to constantly occur when describing individual neurons.
 
 ## Dot Products and Neurons:
+The dot product is particularly useful, as a neuron essentially performs a weighted sum of its inputs.
+
+Suppose a neuron receives three inputs:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix}
+$$
+
+which has three corresponding weights:
+
+$$
+\mathbf{w} =
+\begin{bmatrix}
+0.5 \\
+0.2 \\
+-0.1
+\end{bmatrix}
+$$
+
+The weighted sum is expressed as:
+
+$$
+(0.5)(1) + (0.2)(2) + (-0.1)(3)
+$$
+
+Instead of explicitly writing all of this, the dot product notation can be used instead:
+
+$$
+\mathbf{W}^T\mathbf{x}
+$$
+
+Therefore:
+
+$$
+(0.5)(1) + (0.2)(2) + (-0.1)(3)
+$$
+$$
+= 0.5 + 0.4 - 0.3
+$$
+$$
+= 0.6
+$$
+
+If the neuron has a bias, `b`, such that:
+
+$$
+b = 0.1
+$$
+
+then:
+
+$$
+z = \mathbf{W}^T\mathbf{x} + b
+$$
+
+becomes:
+
+$$
+z = 0.6 + 0.1
+$$
+$$
+= 0.7
+$$
+
+Note that this is logically equivalent to writing:
+
+$$
+z = w_1x_1 + w_2x_2 = w_3x_3 + b
+$$
+
+Vector notation simply allows more compact expression of this.
+
+## Matrices:
 ...
+
