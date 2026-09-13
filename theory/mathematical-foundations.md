@@ -50,5 +50,36 @@ In a neural network, an input example will often be represented as a vector of n
 For an image classifier, the elements may instead represent pixel values.
 
 ## Vector Notation:
+There are many ways to write vectors.
+
+Column Vector:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+2 \\
+3 \\
+5
+\end{bmatrix}
+$$
+
+Parentheses Column Vector:
+
+$$
+\mathbf{x} =
+\begin{pmatrix}
+2 \\
+3 \\
+5
+\end{pmatrix}
+$$
+
+When layout isn't important:
+
+$$
+\mathbf{x} = (2,3,5)
+$$
+
+### Vector Elements:
 ...
 
