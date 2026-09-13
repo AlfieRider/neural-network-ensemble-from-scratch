@@ -128,8 +128,35 @@ To achieve this, apply the chain rule (of differentiation) through the network.
 
 The exact mathematics behind this principle are covered here: link will go here :)
 
-### 3. Iteration:
-The above described process is repeated over many iterations over the entire dataset. This iteration in turn reduces the loss and the network's predictions become more accurate. Parameters can be adapted better to approximate relationships in the data, thus improving the overall performance for predictive modelling, etc.
+2.2 Parameter Update:
+The calculated gradients are used by an optimisation algorithm to update the network's parameters.
+
+`parameterNew = parameterOld - learningRate*Gradient`
+^^^where the `learning rate` determines the effective size of each update.
+
+The parameters are in turn adjusted in the direction expected to reduce the loss. Further discussion of this can be found here: link to go here.
+
+### 3. Iteration and Training:
+The above described process of forward-pass, loss-calculation, backpropagation, and parameter-update, is repeated over many iterations over the entire dataset. This iteration in turn reduces the loss and the network's predictions become more accurate. Parameters can be adapted better to approximate relationships in the data, thus improving the overall performance for predictive modelling, etc.
+
+Training itself does not guarantee that the network will perform well on unseen data; a network may instead learn training data too closely - this is called overfitting. See Generalisation and Overfitting link here for further exploration.
+
+## Training vs Inference:
+Training: the network's parameters are updated. This occurs after backpropagation, as discussed above.
+
+Inference: The trained network itself uses its learned parameters to produce predictions for new inputs. The parameters are not usually updated during this.
+
+## What is actually learnt?
+Any Neural Network will likely not learn a collection of human-set and human-readable rules.
+
+Training instead modifies its parameters, such that the network approximates a useful function relating its inputs to its output.
+
+E.g. Image Classification: the network may learn increasingly useful representations of visual patterns as information is passed through the successive layers.
+
+The exact meaning of individuals weights, or neurons themselves, is not necessarily straightforward to interpret however. Abstractly-put, a trained network can be represented as a function such as below:
+
+`ŷ = f(x; 0)`
+^^where
 
 ## Sources:
 will format properly later...
