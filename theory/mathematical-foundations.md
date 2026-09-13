@@ -334,7 +334,7 @@ $$
 
 As shown, the result produced is a single scalar, here being `32`.
 
-### Dot Product Notation:
+## Dot Product Notation:
 There are several forms of notation for the dot product.
 
 One:
