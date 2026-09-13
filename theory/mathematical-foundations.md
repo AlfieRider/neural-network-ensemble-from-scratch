@@ -198,4 +198,214 @@ $$
 $$
 
 ## Vector Addition:
+Vectors with the same element number can be added together.
+
+Example:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+4 \\
+5 \\
+6
+\end{bmatrix}
+$$
+
+Can be added as shown:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+1+4 \\
+2+5 \\
+3+6
+\end{bmatrix}
+$$
+
+producing:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+5 \\
+7 \\
+9
+\end{bmatrix}
+$$
+
+Python example:
+```
+import numpy as np
+
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+
+c = a + b
+```
+The above code outputs `[5,7,9]`.
+
+## Scalar Multiplication:
+A vector can be multiplied by a scalar.
+
+Example:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix}
+$$
+
+multiplied by:
+
+$$
+a = 2
+$$
+
+This occurs such that as:
+
+$$
+2
+\begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix} =
+\begin{bmatrix}
+2 \\
+4 \\
+6
+\end{bmatrix}
+$$
+
+Python example:
+```
+import numpy as np
+
+x = np.array([1,2,3])
+result = 2 * x
+```
+Where `result = [2,4,6]`
+
+## Dot Products:
+One of the most vital operations for neural networks.
+
+Consider two vectors:
+
+$$
+\begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix} ,
+\begin{bmatrix}
+4 \\
+5 \\
+6
+\end{bmatrix}
+$$
+
+The dot product of these vectors is calculated via multiplying corresponding elements, then adding the results.
+
+Therefore:
+
+$$
+(1)(4) + (2)(5) + (3)(6)
+$$
+$$
+= 4 + 10 + 18
+$$
+$$
+= 32
+$$
+
+As shown, the result produced is a single scalar, here being `32`.
+
+### Dot Product Notation:
+There are several forms of notation for the dot product.
+
+One:
+
+$$
+\mathbf{a}\cdot\mathbf{b}
+$$
+> a and b are vectors here.
+
+A common alternative:
+
+$$
+\mathbf{a}^T\mathbf{b}
+$$
+
+> See that this alternative notation involves transpose.
+
+Take the following column vectors:
+
+$$
+\mathbf{a} = 
+\begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix} ,
+\mathbf{b} =
+\begin{bmatrix}
+4 \\
+5 \\
+6
+\end{bmatrix}
+$$
+
+Transposing `a` produces:
+
+$$
+\begin{bmatrix}
+1 & 2 & 3
+\end{bmatrix}
+$$
+
+Then the following:
+
+$$
+\begin{bmatrix}
+1 & 2 & 3
+\end{bmatrix}
+\begin{bmatrix}
+4 \\
+5 \\
+6
+\end{bmatrix}
+$$
+
+produces:
+
+$$
+(1)(4) + (2)(5) + (3)(6)
+$$
+$$
+= 32
+$$
+
+Therefore:
+
+$$
+\boxed{\mathbf{a}^T\mathbf{b}=32}
+$$
+
+Expect this notation to constantly occur when describing individual neurons.
+
+## Dot Products and Neurons:
 ...
