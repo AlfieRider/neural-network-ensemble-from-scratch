@@ -97,20 +97,36 @@ Examples:
 ### 1. Forward Propagation:
 This is when the data is input; data passes through the network in the forward direction (In->Hidden->Out).
 
-1.1. Linear Transformation; each neuron in the layer recieves inputs, multiplied by associated connection's weights. These products are arithmetically summed, with a bias added on at the end.
+#### 1.1. Linear Transformation: 
+Each neuron in the layer recieves inputs, multiplied by associated connection's weights. These products are arithmetically summed, with a bias added on at the end.
 ```
 z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b 
 ```
-^^^ w = weight, x = input, b = bias
+^^^ `z` = result of linear/affine transformation, `w` = weight, `x` = input, `b` = bias
 
-1.2. Activation; result of linear transformation (z - see above) is passed through this activation function, which introduces non-linearity into the system, thus the network can learn more complex patterns.
+For an entire layer, this can be generalised using vectors and matrices, becoming `z = Wx + b`.
+^^`W` represents the layer's weights, and `b` its biases.
+
+#### 1.2. Activation 
+The result of linear transformation (z - see above) is passed through an activation function (`a = f(z)`), which introduces non-linearity into the system, thus the network can learn more complex patterns.
 > E.g: ReLU, sigmoid, tanh.
 
 ### 2. Backpropagation:
-Comes after forward propagation; the network evaluates its performance using a loss function, which is used to measure the specifically the difference between the actual output and the predicted output. Training aims to minimise this loss.
-- Loss Calculation: the network calculates the loss, providing a measure of error in the predictions. The loss function could also vary; common choices include mean squared error (for regression tasks) or cross-entropy loss (for classification).
-- Gradient Calculation: Network computes gradients of the loss function with respect to network weight and network bias. Involves applying the chain rule to determine how much each part of the output error can be attributed to each weight and bias.
-- Weight update: post-gradient calculation, the weights and biases are updated via an optimisation algorithm (e.g. SGD). The weights are adjusted in the opposite direction of the gradient to minimise the loss. The size of the step taken in each update is determined by the learning rate.
+Comes after forward propagation; the network evaluates its performance using a loss function, which is used to measure the specifically the difference between the desired output (y) and the network-predicted output (ŷ).
+
+`Compare(y, ŷ) -> Loss`
+
+Training aims to minimise this loss.
+> E.g.: Mean Squared Error (common for regression),
+>       Cross-Entropy loss (common for classification)
+
+#### 2.1 Gradient Calculation:
+Backpropagation calculates the gradients of the loss w.r.t the network's parameters. These gradients, simply put, describe how much changing each parameter would in turn affect the loss produced.
+
+To achieve this, apply the chain rule (of differentiation) through the network.
+'Loss -> Output params -> Earlier params -> ... -> Input-side params`
+
+The exact mathematics behind this principle are covered here: link will go here :)
 
 ### 3. Iteration:
 The above described process is repeated over many iterations over the entire dataset. This iteration in turn reduces the loss and the network's predictions become more accurate. Parameters can be adapted better to approximate relationships in the data, thus improving the overall performance for predictive modelling, etc.
