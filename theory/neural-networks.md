@@ -168,7 +168,9 @@ links here once written!!!
 
 ## Sources:
 https://www.geeksforgeeks.org/deep-learning/neural-networks-a-beginners-guide/
+
 https://cs229.stanford.edu/summer2020/cs229-notes-deep_learning.pdf
+
 https://docs.pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html
 
 
