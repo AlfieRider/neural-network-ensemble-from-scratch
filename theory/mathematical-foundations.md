@@ -81,5 +81,41 @@ $$
 $$
 
 ### Vector Elements:
-...
+The elements (components also) of a vector are the individual values inside it.
 
+A vector `x` containing `n` elements:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}
+$$
+
+## Vector Shape:
+The number of elements within a vector, often referred to as its size, length, or dimension.
+
+Example 1:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+2 \\
+3 \\
+5
+\end{bmatrix}
+$$
+
+Example 1 represents a `3-dimensional` column vector. Its shape can be described as `3 * 1`, as it has 3 rows in one column.
+
+$$
+(3,1)
+$$
+
+The above is another way of describing this vector's shape; 3 rows, 1 column.
+
+## Row Vectors & Column Vectors:
+...
