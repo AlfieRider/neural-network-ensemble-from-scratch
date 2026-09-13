@@ -124,7 +124,8 @@ Training aims to minimise this loss.
 Backpropagation calculates the gradients of the loss w.r.t the network's parameters. These gradients, simply put, describe how much changing each parameter would in turn affect the loss produced.
 
 To achieve this, apply the chain rule (of differentiation) through the network.
-'Loss -> Output params -> Earlier params -> ... -> Input-side params`
+
+`Loss -> Output params -> Earlier params -> ... -> Input-side params`
 
 The exact mathematics behind this principle are covered here: link will go here :)
 
@@ -132,6 +133,7 @@ The exact mathematics behind this principle are covered here: link will go here 
 The calculated gradients are used by an optimisation algorithm to update the network's parameters.
 
 `parameterNew = parameterOld - learningRate*Gradient`
+
 ^^^where the `learning rate` determines the effective size of each update.
 
 The parameters are in turn adjusted in the direction expected to reduce the loss. Further discussion of this can be found here: link to go here.
@@ -155,16 +157,18 @@ E.g. Image Classification: the network may learn increasingly useful representat
 
 The exact meaning of individuals weights, or neurons themselves, is not necessarily straightforward to interpret however. Abstractly-put, a trained network can be represented as a function such as below:
 
-`ŷ = f(x; 0)`
-^^where
+`ŷ = f(x; θ)`
+
+^^where `x` = input, `ŷ` = prediction, `θ` = network's learned parameters.
+
+Training itself aims to find parameters that minimises the chosen loss function.
+
+## Further Theory:
+links here once written!!!
 
 ## Sources:
-will format properly later...
-
 https://www.geeksforgeeks.org/deep-learning/neural-networks-a-beginners-guide/
-
 https://cs229.stanford.edu/summer2020/cs229-notes-deep_learning.pdf
-
 https://docs.pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html
 
 
