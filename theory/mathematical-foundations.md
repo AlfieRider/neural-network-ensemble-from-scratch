@@ -725,3 +725,36 @@ $$
 2\times3
 $$
 > as there are 2 neurons, and 3 inputs per neuron.
+
+Now, let:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}
+$$
+
+The entire layer's weighted sums can be calculated with:
+
+$$
+W\mathbf{x}
+$$
+
+which gives:
+
+$$
+\begin{bmatrix}
+w_{11}x_1 + w_{12}x_1 + w_{13}x_1 \\
+w_{21}x_1 + w_{22}x_1 + w_{23}x_1
+\end{bmatrix}
+$$
+
+The first element is the weighted sum for neuron 1, and the second element is the weighted sum for neuron 2.
+
+In other words, one matrix multiplication has performed the weighted sum calculation for every neuron in the layer effectively simultaneously.
+
+## Bias vectors
+...
