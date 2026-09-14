@@ -486,5 +486,71 @@ $$
 Vector notation simply allows more compact expression of this.
 
 ## Matrices:
-...
+A rectangular grid/array/arrangement of numbers, consisting of both rows and columns.
 
+Example:
+
+$$
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+$$
+
+therefore is of shape:
+
+$$
+2 \times 3
+$$
+$$
+(2,3)
+$$
+
+Matrices are most useful when multiple vectors/sets of values need to be worked on simultaneously.
+
+Python example:
+
+```
+import numpy as np
+
+A = np.array([
+    [1, 2, 3],
+    [4, 5, 6]
+  ])
+```
+
+## Matrix Notation:
+Matrices are commonly represented with use of capital letters.
+
+Example:
+
+$$
+W =
+\begin{bmatrix}
+0.5 & 0.3 & -0.1 \\
+0.3 & -0.4 & 0.7
+\end{bmatrix}
+$$
+
+Vectors are often represented through (bold) lowercase letters:
+
+$$
+\mathbf{x}
+$$
+
+whereas matrices conventionally use uppercase letters:
+
+$$
+W
+$$
+
+An example of formal use of this notation:
+
+$$
+\mathbf{z} = W\mathbf{x}+\mathbf{b}
+$$
+> vector Z = matrix W * vector x + vector b
+
+## Matrix Dimensions and Shapes:
+...
