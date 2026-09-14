@@ -1086,3 +1086,24 @@ The given equation works, and becomes very valuable because of the fact, such fo
 The idea behind this specific markdown file was to prepare myself for the foundational mathematics behind forward propagation. Thus, naturally, I highly recommend that any reader reads `forward-propagation.md` next! 
 
 Do note that this information will not be repeated again, so either learn this well or have it ready to go in another tab if needbe!
+
+## Sources:
+https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/1.-vectors-and-matrices
+
+https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors
+
+https://www.khanacademy.org/math/multivariable-calculus/thinking-about-multivariable-function/x786f2022:vectors-and-matrices/a/matrices--intro-mvc
+
+https://openstax.org/books/algebra-and-trigonometry-2e/pages/10-8-vectors
+
+https://openstax.org/books/calculus-volume-3/pages/2-3-the-dot-product
+
+
+
+
+
+
+
+
+
+
