@@ -933,4 +933,79 @@ result = W @ x
 > For numpy arrays W @ x performs matrix multiplication itself.
 
 ## A complete Neural Network example:
-...
+A summary-like combination of all that is explained above.
+
+Suppose a layer contains:
+- 3 inputs
+- 2 neurons
+
+The input is:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+2 \\
+3 \\
+5
+\end{bmatrix}
+$$
+
+The weight matrix is:
+
+$$
+W =
+\begin{bmatrix}
+0.5 & 0.2 & -0.1 \\
+0.3 & -0.4 & 0.7
+\end{bmatrix}
+$$
+
+The biases are:
+
+$$
+\mathbf{b} =
+\begin{bmatrix}
+0.1 \\
+0.2
+\end{bmatrix}
+$$
+
+The first layer calculates the following:
+
+$$
+W\mathbf{x}
+$$
+
+$$
+= \begin{bmatrix}
+(0.5)(2)+(0.2)(3)+(-0.1)(5) \\
+(0.3)(2)+(-0.4)(3) + (0.7)(5)
+\end{bmatrix}
+$$
+$$
+= \begin{bmatrix}
+1.1 \\
+2.9
+\end{bmatrix}
+$$
+
+The bias is now added, as shown:
+
+$$
+\begin{bmatrix}
+1.1 \\
+2.9
+\end{bmatrix} +
+\begin{bmatrix}
+0.1 \\
+0.2
+\end{bmatrix}
+$$
+$$
+= \begin{bmatrix}
+1.2 \\
+3.1
+\end{bmatrix}
+$$
+
+This final vector holds the pre-activation values for the two neurons given.
