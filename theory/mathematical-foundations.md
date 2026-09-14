@@ -824,4 +824,54 @@ $$
 where z₁ belongs to the first neuron, and z₂ the second.
 
 ## General Idea of Matrix Multiplication:
+The principle of matrix multiplication has been described in full above. See the below as a summary thus far.
+
+For:
+
+$$
+A\mathbf{x}
+$$
+
+each row of A is used to calculate the dot product with `x`.
+
+Given two general matrices,
+
+$$
+A_{m\times n}
+$$
+$$
+B_{n\times p}
+$$
+
+The multiplication:
+
+$$
+AB
+$$
+
+produces a matrix with shape:
+
+$$
+m\times p
+$$
+
+The important underlying rule here is that the inner dimensions must match.
+
+Matching example:
+
+$$
+(2\times3)(3\times1) => (2\times1)
+$$
+> valid, as the inner 3s match.
+
+Invalid example:
+
+$$
+(2\times3)(1\times2) => \text{invalid}
+$$
+> invalid, as the inner dimensions of 3 and 1 do not match.
+
+This is also useful when checking any neural network equations.
+
+## Python - Mathematics Display:
 ...
