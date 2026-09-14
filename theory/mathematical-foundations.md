@@ -553,4 +553,81 @@ $$
 > vector Z = matrix W * vector x + vector b
 
 ## Matrix Dimensions and Shapes:
+Matrix multiplication (explained later) only works when the dimensions of matrices are compatible.
+
+Consider:
+
+$$
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+$$
+
+The shape is described as shown:
+
+$$
+2 \text{ rows} \times 3 \text{ columns}
+$$
+$$
+2 \times3
+$$
+$$
+(2,3)
+$$
+
+Now consider:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+7 \\
+8 \\
+9
+\end{bmatrix}
+$$
+
+This has shape described as below:
+
+$$
+3 \text{ rows} \times 1 \text{ column}
+$$
+$$
+3 \times1
+$$
+$$
+(3,1)
+$$
+
+Therefore, the multiplication of these two can occur, as the inner dimensions match:
+
+$$
+A\mathbf{x}
+$$
+
+$$
+= \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+\begin{bmatrix}
+7 \\
+8 \\
+9
+\end{bmatrix}
+$$
+
+The resulting shape is therefore:
+
+$$
+=> (2\times\mathbf{3})(\mathbf{3}\times1)
+$$
+
+$$
+2\times1
+$$
+> As the inner 3s match, the resulting shape of a matrix multiplication would be dictated by the outer two values, being (2,1)
+
+## Matrix-Vector Multiplication:
 ...
