@@ -1042,5 +1042,47 @@ $$
 
 Take mental note of this equation; this is extremely important for forward propagation.
 
-## unsure of next subheading...
-...
+## Why bother with this notation?
+This section serves as a sort of summary to the above.
+
+At first, an expression such as shown below may feel undesirably excessive:
+
+$$
+\mathbf{a}=\mathop{\text{ReLU}}(W\mathbf{x}+\mathbf{b})
+$$
+
+especially in comparison to such of:
+
+$$
+a = \mathop{\text{ReLU}}(W @ x + b)
+$$
+
+However, nothing too special is really happening in terms of complexity. The mathematical process of equation 1 of this section is written below:
+1. Take the input vector `x`
+2. Multiply `x` by weight matrix `W`
+3. Add the bias vector `b` to ^^
+4. Apply `ReLU` to each resulting value (can substitute any activiation function)
+5. Obtain the output vector `a`
+
+The given equation works, and becomes very valuable because of the fact, such for whether a layer contains two neurons, or two million neurons. Additionally, its nice and simplistic to describe the entire layer at once.
+
+## Notation Summary:
+| Notation | Meaning |
+|----------|---------|
+| x | A scalar |
+| **x** | A vector |
+| xᵢ | i-th vector element |
+| W | a martix (e.g. Weight Matrix) |
+| **b** | a bias vector |
+| xᵀ | transpose of a vector |
+| **a** + **b** | Vector addition |
+| x*y | scalar multiplication |
+| **a**ᵀb | dot product |
+| Wx | Matrix-vector multiplication |
+| Wx + b | Weighted sums + bias for a layer |
+| ReLU(x) | ReLU applied element-wise |
+
+## What to read next?
+The idea behind this specific markdown file was to prepare myself for the foundational mathematics behind forward propagation. Thus, naturally, I highly recommend that any reader reads `forward-propagation.md` next! 
+
+Do note that this information will not be repeated again, so either learn this well or have it ready to go in another tab if needbe!
