@@ -1009,3 +1009,38 @@ $$
 $$
 
 This final vector holds the pre-activation values for the two neurons given.
+
+Following this, an activation function is then applied to the values. For this example, ReLU will be used as a substitue:
+
+$$
+\mathop{\text{ReLU}}(z)=\max(0,z)
+$$
+
+then gives:
+
+$$
+\begin{bmatrix}
+\mathop{\text{ReLU}}(1.2) \\
+\mathop{\text{ReLU}}(3.1)
+\end{bmatrix}
+$$
+
+in turn giving:
+
+$$
+\begin{bmatrix}
+1.2 \\
+3.1
+\end{bmatrix}
+$$
+
+Therefore, the entire layer can then be expressed compactly, as shown below:
+
+$$
+\boxed{\mathbf{a}=\mathop{\text{ReLU}}(W\mathbf{x}+\mathbf{b})}
+$$
+
+Take mental note of this equation; this is extremely important for forward propagation.
+
+## unsure of next subheading...
+...
