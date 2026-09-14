@@ -874,4 +874,63 @@ $$
 This is also useful when checking any neural network equations.
 
 ## Python - Mathematics Display:
+The vector shown below:
+
+$$
+\mathbf{x}
+\begin{bmatrix}
+1 //
+2 //
+3
+\end{bmatrix}
+$$
+
+can be represented as:
+
+```
+import numpy as np
+
+x = np.array([1,2,3])
+```
+
+The matrix shown below:
+
+$$
+W =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+$$
+
+can be represented as:
+
+```
+import numpy as np
+
+W = np.array([
+    [1, 2, 3],
+    [4, 5, 6]
+])
+```
+
+The Matrix-vector multiplication:
+
+$$
+W\mathbf{x}
+$$
+
+can be performed as shown:
+
+```
+import numpy as np
+#x and W declared as above
+
+result = W @ x
+```
+> The python @ operator represents matrix multiplication
+> For numpy arrays, W * x is element-wise multiplication when the shape permits it.
+> For numpy arrays W @ x performs matrix multiplication itself.
+
+## A complete Neural Network example:
 ...
