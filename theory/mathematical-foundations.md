@@ -630,4 +630,98 @@ $$
 > As the inner 3s match, the resulting shape of a matrix multiplication would be dictated by the outer two values, being (2,1)
 
 ## Matrix-Vector Multiplication:
-...
+Learnt best through an example, the same as above.
+
+Example cont.
+
+$$
+= \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+\begin{bmatrix}
+7 \\
+8 \\
+9
+\end{bmatrix}
+$$
+
+The first row is multiplied by the vector:
+
+$$
+(1)(7)+(2)(8)+(3)(9)
+$$
+$$
+= 7+16+27
+$$
+$$
+= 50
+$$
+
+The second row is also then multiplied by the vector:
+
+$$
+(4)(7)+(5)(8)+(6)(9)
+$$
+$$
+= 28+40+54
+$$
+$$
+= 122
+$$
+
+Thus the result is as shown:
+
+$$
+\begin{bmatrix}
+50 \\
+122
+\end{bmatrix}
+$$
+
+In other words, each row of the matrix performs a dot product with the vector.
+
+## Matrix Multiplication and Neural Network Layers:
+Suppose a neural network layer contains:
+- 3 inputs values
+- 2 neurons
+Each neuron should therefore have (need) 3 weights.
+
+The first neuron may have:
+
+$$
+\mathbf{w_1}=
+\begin{bmatrix}
+w_{11} \\
+w_{12} \\
+w_{13}
+\end{bmatrix}
+$$
+
+The second neuron may have
+
+$$
+\mathbf{w_2}=
+\begin{bmatrix}
+w_{21} \\
+w_{22} \\
+w_{23}
+\end{bmatrix}
+$$
+
+Instead of storing these separately, these can be stored in a single matrix, as shown:
+
+$$
+W =
+\begin{bmatrix}
+w_{11} & w_{12} & w_{13} \\
+w_{21} & w_{22} & w_{23}
+\end{bmatrix}
+$$
+
+This has shape:
+
+$$
+2\times3
+$$
+> as there are 2 neurons, and 3 inputs per neuron.
