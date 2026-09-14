@@ -757,4 +757,71 @@ The first element is the weighted sum for neuron 1, and the second element is th
 In other words, one matrix multiplication has performed the weighted sum calculation for every neuron in the layer effectively simultaneously.
 
 ## Bias vectors
+When a layer contains multiple neurons, each neuron generally has its own bias. Therefore, instead of having a single scalar bias, `b`, a vector bias may exist instead:
+
+$$
+\mathbf{b} =
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+\end{bmatrix}
+$$
+
+> For two given neurons, there are two biases.
+
+The complete calculation for the layer is in turn:
+
+$$
+\mathbf{z} = W\mathbf{x} + \mathbf{b}
+$$
+
+Example:
+
+$$
+W =
+\begin{bmatrix}
+0.5 & 0.2 & -0.1 \\
+0.3 & -0.4 & 0.7
+\end{bmatrix} ,
+\mathbf{x} =
+\begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix}
+$$
+
+and:
+
+$$
+\mathbf{b} =
+\begin{bmatrix}
+0.1 \\
+0.2
+\end{bmatrix}
+$$
+
+First calculate:
+
+$$
+W\mathbf{x}
+$$
+> the weighted sum for each neuron.
+
+Then add the corresponding bias to each result.
+> as shown above.
+
+The result is:
+
+$$
+\mathbf{z} =
+\begin{bmatrix}
+z_1 \\
+z_2
+\end{bmatrix}
+$$
+
+where z₁ belongs to the first neuron, and z₂ the second.
+
+## General Idea of Matrix Multiplication:
 ...
