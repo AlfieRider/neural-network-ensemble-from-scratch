@@ -12,12 +12,12 @@ In other words, a formula for ^^ can be expressed as shown (per layer):
 $$
 \mathbf{a} = f(W\mathbf{x} + \mathbf{b})
 $$
-> **x** is the input to the specified layer
-> W is the layer's weight matrix
-> **b** is the layer's bias vector.
-> W**x** + **b** produces the pre-activation values.
-> f is the activation function (e.g. ReLU, tanh, etc)
-> **a** is the layer's output, i.e. `activiation`.
+> - **x** is the input to the specified layer
+> - W is the layer's weight matrix
+> - **b** is the layer's bias vector.
+> - W**x** + **b** produces the pre-activation values.
+> - f is the activation function (e.g. ReLU, tanh, etc)
+> - **a** is the layer's output, i.e. `activiation`.
 
 Readers may recognise the above (^^) from `mathematical-foundations.md`. This process, as mentioned, is repeatedly applied throughout the network as data moves through it.
 
