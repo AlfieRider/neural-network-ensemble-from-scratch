@@ -203,7 +203,7 @@ Vectors with the same element number can be added together.
 Example:
 
 $$
-\mathbf{x} =
+\mathbf{a} =
 \begin{bmatrix}
 1 \\
 2 \\
@@ -214,7 +214,7 @@ $$
 and:
 
 $$
-\mathbf{x} =
+\mathbf{b} =
 \begin{bmatrix}
 4 \\
 5 \\
@@ -225,7 +225,7 @@ $$
 Can be added as shown:
 
 $$
-\mathbf{x} =
+\mathbf{c} =
 \begin{bmatrix}
 1+4 \\
 2+5 \\
@@ -236,7 +236,7 @@ $$
 producing:
 
 $$
-\mathbf{x} =
+\mathbf{c} =
 \begin{bmatrix}
 5 \\
 7 \\
