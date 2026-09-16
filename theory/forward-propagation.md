@@ -117,5 +117,70 @@ $$
 $$
 > Note that the subscript here is used to indicate the number of elements, rather than the formal notation for the vectors themselves.
 
-##another section WOOOO
-...
+## Matrix Multiplication Insight
+This section will aim to clarify (/recap, for readers of `mathematical-foundations.md`), the frequently occurring operation, which is displayed below:
+
+$$
+W\mathbf{x}
+$$
+> The key takeaway from the following section is that the weighted sum for every neuron is performed simultaneously.
+> Do feel free to skip to the next section!
+
+Example; suppose:
+
+$$
+W =
+\begin{bmatrix}
+\ w_{11} & w_{12} & w_{13} \\
+\ w_{21} & w_{22} & w_{23} \\
+\ w_{31} & w_{32} & w_{33} \\
+\ w_{41} & w_{42} & w_{43}
+\end{bmatrix}
+$$
+
+and that:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+\ x_1 \\
+\ x_2 \\
+\ x_3
+\end{bmatrix}
+$$
+
+The following calculation occurs:
+
+$$
+W\mathbf{x}
+$$
+
+$$
+= \begin{bmatrix}
+\ w_{11}x_1 + w_{12}x_2 + w_{13}x_3 \\
+\ w_{21}x_1 + w_{22}x_2 + w_{23}x_3 \\
+\ w_{31}x_1 + w_{32}x_2 + w_{33}x_3 \\
+\ w_{41}x_1 + w_{42}x_2 + w_{43}x_3
+\end{bmatrix}
+$$
+> recall that the shape of W**x** is derived from (4x3)(3x1) => (4,1)
+
+Each row produced from ^^ represents one neuron's weighted sum, thus proves that the matrix itself allows the network to calculate for all four given neurons simultaneously.
+
+After then adding the bias vector:
+
+$$
+\mathbf{z} =
+\begin{bmatrix}
+\ w_{11}x_1 + w_{12}x_2 + w_{13}x_3 + b_1 \\
+\ w_{21}x_1 + w_{22}x_2 + w_{23}x_3 + b_2 \\
+\ w_{31}x_1 + w_{32}x_2 + w_{33}x_3 + b_3 \\
+\ w_{41}x_1 + w_{42}x_2 + w_{43}x_3 + b_4
+\end{bmatrix}
+$$
+
+each element then therefore becomes the pre-activation of a specific given neuron.
+
+## Applying the Activation Function
+Yet again serves as another clarification exercise, or alternatively a `mathematical-foundations.md` recap.
+
