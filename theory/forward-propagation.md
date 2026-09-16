@@ -97,3 +97,25 @@ with:
 $$
 \mathbf{z} \in \mathbb{R}^4
 $$
+
+The activation function is then applied to each element, as shown:
+
+$$
+\mathbf{a} = f(\mathbf{z})
+$$
+
+which then gives:
+
+$$
+\mathbf{a} \in \mathbb{R}^4
+$$
+
+The dimensionality can be seen to change from three input values to four output values, following the below:
+
+$$
+\boxed{\mathbf{x_4} \rightarrow W_{4\times3} \rightarrow \mathbf{z_4} \rightarrow \mathbf{a_4}}
+$$
+> Note that the subscript here is used to indicate the number of elements, rather than the formal notation for the vectors themselves.
+
+##another section WOOOO
+...
