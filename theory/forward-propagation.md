@@ -21,5 +21,36 @@ $$
 
 Readers may recognise the above (^^) from `mathematical-foundations.md`. This process, as mentioned, is repeatedly applied throughout the network as data moves through it.
 
-## undecided title. decided content.
+## The Neuron Model:
+Consider a neuron receiving the following inputs:
+
+$$
+x_1, x_2, x_3
+$$
+
+then the same neuron's corresponding weights:
+
+$$
+w_1, w_2, w_3
+$$
+
+The pre-activation calculation is as follows:
+
+$$
+z = w_1x_1 + w_2x_2+ w_3x_3 + b
+$$
+
+The neuron then applies an activation function, such that:
+
+$$
+a = f(z)
+$$
+
+Using vector notation (introduced in `mathematical-foundations.md`), this is expressed as:
+
+$$
+a = f(\mathbf{w}^T\mathbf{x} + \mathbf{b})
+$$
+
+## Forward Propagation through a Layer:
 ...
