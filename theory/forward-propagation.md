@@ -513,4 +513,67 @@ Each layer transforms its input into a new representation, which is then transfo
 # A Multi-Layer Process:
 Below is an example of how a network will function via multiple layers. This is conceptually the same as earlier in this document (and as in `mathematical-foundations.md`), however a real-value example may be worth including.
 
-ugh
+Consider a network with:
+- 2 input values
+- 2 neurons in the hidden layer
+- 1 output neuron
+
+This will be diagrammatically represented as such:
+
+$$
+2 \rightarrow 2 \rightarrow 1
+$$
+
+Let:
+$$
+\mathbf{x} =
+\begin{bmatrix}
+1 \\
+2
+\end{bmatrix}
+$$
+$$
+W^{(1)} =
+\begin{bmatrix}
+2 & 1 \\
+-1 & 3
+\end{bmatrix}
+$$
+$$
+\mathbf{b}^{(1)} =
+\begin{bmatrix}
+1 \\
+-2
+\end{bmatrix}
+$$
+
+The first layer calculates the following:
+
+$$
+\mathbf{z}^{(1)} = W^{(1)}\mathbf(x) + \mathbf{b}^{(1)}
+$$
+$$
+\mathbf{z}^{(1)} =
+\begin{bmatrix}
+2(1) + 1(2) + 1 \\
+-1(1) + 3(2) - 2
+\end{bmatrix}
+$$
+$$
+= \begin{bmatrix}
+5 \\
+3
+\end{bmatrix}
+$$
+
+An through applying ReLU for activation gives:
+
+$$
+\mathbf{a}^{(1)} =
+\begin{bmatrix}
+5 \\
+3
+\end{bmatrix}
+$$
+
+2nd layer next
