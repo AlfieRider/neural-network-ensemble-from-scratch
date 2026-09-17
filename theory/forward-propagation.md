@@ -397,4 +397,31 @@ $$
 $$
 
 ## Equations \ Calculations for Multiple Layers:
+For the first layer:
+
+$$
+\mathbf{z}^{(1)} = W^{(1)}\mathbf(x) + \mathbf{b}^{(1)}
+$$
+$$
+\mathbf{a}^{(1)} = f^{(1)}(\mathbf{z}^{(1)})
+$$
+
+The first layer's output becomes the second layer's input. Therefore:
+
+$$
+\mathbf{z}^{(2)} = W^{(2)}\mathbf{a}^{(1)} + \mathbf{b}^{(2)}
+$$
+$$
+\mathbf{a}^{(2)} = f^{(2)}(\mathbf{z}^{(2)})
+$$
+
+A set of generalised formulae for this is such that:
+
+$$
+\mathbf{a}^{(n+1)} = f^{(n+1)}(W^{(n+1)}\mathbf{a}^{(n)} + \mathbf{b}^{(n+1)})
+$$
+
+such that the final activation produced is the network's output.
+
+## explain dimension change possibly? no harm done...?
 ...
