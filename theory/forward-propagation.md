@@ -223,6 +223,38 @@ $$
 \mathbf{a} = \mathbf{f}(W\mathbf{x} + \mathbf{b})
 $$
 
-## more
-...i think ill sleep now...?
+## Layer Calculation in full:
+Consider a layer taking three inputs and containing two neurons.
+
+For the given inputs, let:
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+2 \\
+3 \\
+1
+\end{bmatrix}
+$$
+
+and for weights, let:
+
+$$
+W =
+\begin{bmatrix}
+1 & 2 & -1 \\
+-2 & 1 & 3
+\end{bmatrix}
+$$
+> the shape of W is `2 x 3`, as it contains 2 rows (neurons) and 3 columns (inputs per neuron)
+
+For the bias vector, let:
+
+$$
+\mathbf{b} =
+\begin{bmatrix}
+1 \\
+-2
+\end{bmatrix}
+$$
 
