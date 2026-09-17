@@ -423,5 +423,59 @@ $$
 
 such that the final activation produced is the network's output.
 
-## explain dimension change possibly? no harm done...?
+## Trans-Layer Dimension Change:
+The dimensions of each weight matrix are determined by the number of inputs and neurons in that particular layer.
+
+Suppose that the first layer contains 4 neurons, and that:
+
+$$
+\mathbf{x} \in ℝ^{3}
+$$
+> such that the vector has 3 rows and 1 column (i.e. shape of 3x1)
+
+Such that also:
+
+$$
+W^{(1)} \in ℝ^{4\times3}
+$$
+> four neurons, 3 inputs.
+
+Given the above, it follows that:
+
+$$
+(4x3)(3x1) = (4x1)
+$$
+
+Therefore it can be concluded that `W¹**x**` produces 4 values (presented as 4 rows, 1 column).
+
+Now consider that the four values produced ^^ are the input to the next layer:
+
+$$
+\mathbf{a}^{(1)} \in ℝ^4
+$$
+> i.e. a⁽¹⁾ here is the input of four values produced from layer 1.
+
+If the next layer contains, say, 2 neurons, such that:
+
+$$
+W^{(2)} \in ℝ^{2\times4}
+$$
+> i.e. ℝ<sup>(2 neurons x 4 inputs)</sup>
+
+as:
+
+$$
+(2\times4)(4\times1) = (2\times1)
+$$
+
+and in turn the result contains 2 values (presented in one column), such that:
+
+$$
+\mathbf{a}^{(2)} \in ℝ^2
+$$
+
+The fundamental relationship is written below:
+> The number of columns in a layer's Weight matrix `W` must be equivalent to the number of values entering that layer, whilst the number of rows in `W` is equivalent to the number of neurons in said layer.
+
+## interesting read on function composition - would be good here
 ...
