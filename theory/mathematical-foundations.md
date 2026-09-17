@@ -747,8 +747,8 @@ which gives:
 
 $$
 \begin{bmatrix}
-w_{11}x_1 + w_{12}x_1 + w_{13}x_1 \\
-w_{21}x_1 + w_{22}x_1 + w_{23}x_1
+w_{11}x_1 + w_{12}x_2 + w_{13}x_3 \\
+w_{21}x_1 + w_{22}x_2 + w_{23}x_3
 \end{bmatrix}
 $$
 
