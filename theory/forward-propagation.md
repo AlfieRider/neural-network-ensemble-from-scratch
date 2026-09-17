@@ -359,8 +359,9 @@ and through calculation, the first layer then produces:
 $$
 \mathbf{x}^{(1)} \in ℝ^4
 $$
+> i.e. vector **x** in the 1st Layer produces 4 real values, such that {x₁, x₂, x₃, x₄} belongs to ℝ^4.
 
-The second layer therefore recieves 4 input values.
+The second layer therefore receives these  4 input values.
 
 The weight matrix consequently has 4 columns, as dictated below:
 
