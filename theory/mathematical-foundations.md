@@ -480,7 +480,7 @@ $$
 Note that this is logically equivalent to writing:
 
 $$
-z = w_1x_1 + w_2x_2 = w_3x_3 + b
+z = w_1x_1 + w_2x_2 + w_3x_3 + b
 $$
 
 Vector notation simply allows more compact expression of this.
