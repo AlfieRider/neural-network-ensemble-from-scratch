@@ -477,5 +477,40 @@ $$
 The fundamental relationship is written below:
 > The number of columns in a layer's Weight matrix `W` must be equivalent to the number of values entering that layer, whilst the number of rows in `W` is equivalent to the number of neurons in said layer.
 
-## interesting read on function composition - would be good here
-...
+## Forward Propagation as Function Composition:
+A neural network can also be understood as a sequence of functions. A layer performs:
+
+$$
+f(W\mathbf{x} + \mathbf{b})
+$$
+
+So a two layer network may in turn be represented as:
+
+$$
+a^{(1)} = f_1(W_1\mathbf{x} + \mathbf{b_1}
+$$
+
+followed by:
+
+$$
+a^{(2)} = f_2(W_2\mathbf{x} + \mathbf{b_2}
+$$
+
+Through substitution of the Layer1 equation into the Layer2 equation, the following representation is produced:
+
+$$
+a^{(2)} = f_2(W_2f_1(W_1\mathbf{x} + \mathbf{b_1}) + \mathbf{b_2})
+$$
+
+which conceptually is simply:
+
+$$
+\mathbf{x} \rightarrow \text{Layer 1} \rightarrow \text{Layer 2} \rightarrow \text{Output}
+$$
+
+Each layer transforms its input into a new representation, which is then transformed by the following layer. This is why neural networks can be mathematically viewed as compositions of functions.
+
+# A Multi-Layer Process:
+Below is an example of how a network will function via multiple layers. This is conceptually the same as earlier in this document (and as in `mathematical-foundations.md`), however a real-value example may be worth including.
+
+ugh
