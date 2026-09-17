@@ -184,3 +184,45 @@ each element then therefore becomes the pre-activation of a specific given neuro
 ## Applying the Activation Function
 Yet again serves as another clarification exercise, or alternatively a `mathematical-foundations.md` recap.
 
+The activation function is applied after the weighted sum and bias have been calculated.
+
+For example, assuming the layer uses ReLU, defined as follows:
+
+$$
+\mathbf{f}(z) = max(0, z)
+$$
+
+and the given pre-activation vector is such that:
+
+$$
+\mathbf{z} =
+\begin{bmatrix}
+2 \\
+-1 \\
+4 \\
+-3 \\
+\end{bmatrix}
+$$
+
+then:
+
+$$
+\mathbf{a} = \mathrm{ReLU}(\mathbf{z}) =
+\begin{bmatrix}
+2 \\
+0 \\
+4 \\
+0 \\
+\end{bmatrix}
+$$
+> note: the activation function is applied sequentially through each element.
+
+The above thus explains the following shorthand, which represents applying f to every element of the vector `Wx + b`:
+
+$$
+\mathbf{a} = \mathbf{f}(W\mathbf{x} + \mathbf{b})
+$$
+
+## more
+...i think ill sleep now...?
+
