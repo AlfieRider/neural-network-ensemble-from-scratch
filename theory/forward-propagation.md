@@ -387,7 +387,7 @@ and produces one value.
 The overall structure here is:
 
 $$
-3 \rightarrow 4 \rightarrow 2 \rightarrow 1 \rightarrow
+3 \rightarrow 4 \rightarrow 2 \rightarrow 1
 $$
 
 or in vector terms:
