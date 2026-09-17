@@ -42,6 +42,7 @@ $$
 20
 \end{bmatrix}
 $$
+
 > Where height = 180, weight = 50, and age = 20.
 > The entire collection is the vector x.
 
