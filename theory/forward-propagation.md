@@ -396,7 +396,7 @@ $$
 \mathbf{x} \rightarrow \mathbf{a}^{(1)} \rightarrow \mathbf{a}^{(2)} \rightarrow \mathbf{a}^{(3)}
 $$
 
-## Equations \ Calculations for Multiple Layers:
+## Equations / Calculations for Multiple Layers:
 For the first layer:
 
 $$
@@ -525,6 +525,7 @@ $$
 $$
 
 Let:
+
 $$
 \mathbf{x} =
 \begin{bmatrix}
@@ -613,4 +614,37 @@ $$
 $$
 
 ## The Output Layer
-THIS IS WHERE IT GETS FUN WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO im acc so happy lol
+The final layer of the neural network is structurally identical to any other layer, such that the below still applies:
+
+$$
+\mathbf{z}^{(L)} = W^{(L)}\mathbf{a}^{(L-1)} + \mathbf{b}^{(L)}
+$$
+
+However, it is so crucial to note that the activation function used by this layer depends solely on the task at hand.
+
+For example, a regression network may produce a continuous value directly:
+
+$$
+ŷ = z
+$$
+
+A binary classification network may use a sigmoid:
+
+$$
+ŷ = σ(z)
+$$
+> ideal for probabilities, as it maps the input `z` to a number `n` such that {n: 0 ≤ n ≤ 1}
+
+A multi-class classification may use softmax:
+
+$$
+ŷ = \text{softmax}(z)
+$$
+> all inputs are converted into a probability distribution, such that all values sum to 1.
+
+Where the output `ŷ` is representative of the network's prediction (i.e. output).
+
+The choice of output activation is therefore strongly connected to the type of problem being solved.
+
+## Forward Propagation in an Image Classifier:
+self awareness 0-0 ruh roh
