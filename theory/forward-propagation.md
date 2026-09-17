@@ -415,7 +415,7 @@ $$
 \mathbf{a}^{(2)} = f^{(2)}(\mathbf{z}^{(2)})
 $$
 
-A set of generalised formulae for this is such that:
+A generalised formula for this is such that:
 
 $$
 \mathbf{a}^{(n+1)} = f^{(n+1)}(W^{(n+1)}\mathbf{a}^{(n)} + \mathbf{b}^{(n+1)})
