@@ -58,7 +58,7 @@ Each layer is expected to contain a multitude of neurons.
 Suppose the given input contains three values, such that:
 
 $$
-x \in \mathbb{R}^3
+x \in \mathbb{ℝ}^3
 $$
 
 and suppose that the layer in question contains 4 neurons.
@@ -66,7 +66,7 @@ and suppose that the layer in question contains 4 neurons.
 Each neuron needs its own set of three weights; each neuron receives all 3 input values (weights * input). Therefore, the weight matrix in this case will have four rows and three columns, as shown:
 
 $$
-x \in \mathbb{R}^{4 \times 3}
+x \in \mathbb{ℝ}^{4 \times 3}
 $$
 
 > thus note that the general formula for the shape of the Weight matrix is:
@@ -83,7 +83,7 @@ produces four values, one per neuron.
 The bias vector also needs one value per neuron, such that:
 
 $$
-b \in \mathbb{R}^4
+b \in \mathbb{ℝ}^4
 $$
 
 In turn, the complete pre-activation calculation is consequently:
@@ -95,7 +95,7 @@ $$
 with:
 
 $$
-\mathbf{z} \in \mathbb{R}^4
+\mathbf{z} \in \mathbb{ℝ}^4
 $$
 
 The activation function is then applied to each element, as shown:
@@ -107,7 +107,7 @@ $$
 which then gives:
 
 $$
-\mathbf{a} \in \mathbb{R}^4
+\mathbf{a} \in \mathbb{ℝ}^4
 $$
 
 The dimensionality can be seen to change from three input values to four output values, following the below:
