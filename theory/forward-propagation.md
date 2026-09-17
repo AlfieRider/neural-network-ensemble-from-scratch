@@ -338,5 +338,62 @@ $$
 \end{bmatrix}
 $$
 
-## maybe now on combining layers?
+## Forward Propagation through Multiple Layers:
+The real fun starts when these individual layers are strung together. This is best explained through a simplified example.
+
+Suppose a network has:
+- 3 input values
+- 4 neurons in Layer 1
+- 2 neurons in Layer 2
+- 1 output neuron.
+
+The first layer recieves:
+
+$$
+\mathbf{x} \in ℝ^3
+$$
+> recall this notation from earlier in this document.
+
+and through calculation, the first layer then produces:
+
+$$
+\mathbf{x}^{(1)} \in ℝ^4
+$$
+
+The second layer therefore recieves 4 input values.
+
+The weight matrix consequently has 4 columns, as dictated below:
+
+$$
+W^{(2)} \in ℝ^{2\times4}
+$$
+> i.e. W contains two neurons, each receiving 4 inputs.
+
+The second layer then produces:
+
+$$
+\mathbf{x}^{(2)} \in ℝ^2
+$$
+
+The final layer then in turn receives both of these `a` values, thus the weight matrix has shape:
+
+$$
+W^{(3)} \in ℝ^{1\times2}
+$$
+
+and produces one value.
+
+The overall structure here is:
+
+$$
+3 \rightarrow 4 \rightarrow 2 \rightarrow 1 \rightarrow
+$$
+
+or in vector terms:
+
+$$
+\mathbf{x} \rightarrow \mathbf{a}^{(1)} \rightarrow \mathbf{a}^{(2)} \rightarrow \mathbf{a}^{(3)}
+$$
+
+## Equations \ Calculations for Multiple Layers:
 ...
