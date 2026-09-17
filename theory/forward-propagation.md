@@ -163,7 +163,7 @@ $$
 \ w_{41}x_1 + w_{42}x_2 + w_{43}x_3
 \end{bmatrix}
 $$
-> recall that the shape of W**x** is derived from (4x3)(3x1) => (4,1)
+> recall that the shape of Wx is derived from (4x3)(3x1) => (4,1)
 
 Each row produced from ^^ represents one neuron's weighted sum, thus proves that the matrix itself allows the network to calculate for all four given neurons simultaneously.
 
