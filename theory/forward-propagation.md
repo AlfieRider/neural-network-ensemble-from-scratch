@@ -258,3 +258,85 @@ $$
 \end{bmatrix}
 $$
 
+Recall that the pre-activation is defined as below:
+
+$$
+\mathbf{z} = W\mathbf{x} + \mathbf{b}
+$$
+
+First, `Wx` is calculated:
+
+$$
+W\mathbf{x}
+$$
+$$
+= \begin{bmatrix}
+1 & 2 & -1 \\
+-2 & 1 & 3
+\end{bmatrix}
+\begin{bmatrix}
+2 \\
+3 \\
+1
+\end{bmatrix}
+$$
+$$
+= \begin{bmatrix}
+1(2) + 2(3) - 1(1) \\
+-2(2) + 1(3) + 3(1)
+\end{bmatrix}
+$$
+$$
+= \begin{bmatrix}
+7 \\
+2
+\end{bmatrix}
+$$
+
+The bias vector is then added:
+
+$$
+\mathbf{z} =
+\begin{bmatrix}
+7 \\
+2
+\end{bmatrix} +
+\begin{bmatrix}
+1 \\
+-2
+\end{bmatrix}
+$$
+$$
+= \begin{bmatrix}
+8 \\
+0
+\end{bmatrix}
+$$
+
+Application of an activation function (ReLU used here) is shown below:
+
+$$
+\mathbf{a} = \mathop{\text{ReLU}}
+\begin{bmatrix}
+8 \\
+0
+\end{bmatrix} =
+\begin{bmatrix}
+8 \\
+0
+\end{bmatrix}
+$$
+> recall that ReLU = max(0, z)
+
+Therefore the output of this layer is:
+
+$$
+\mathbf{a} = 
+\begin{bmatrix}
+8 \\
+0
+\end{bmatrix}
+$$
+
+## maybe now on combining layers?
+...
