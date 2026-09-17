@@ -19,7 +19,7 @@ weight = 0.5
 ## Vectors:
 A vector is an ordered collection of numbers.
 
-Example: `f(x) = [2, 3, 5]`
+Example: `x = [2, 3, 5]`
 > This vector contains values 2, 3, and 5.
 > X here is a vector.
 
