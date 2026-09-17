@@ -647,4 +647,76 @@ Where the output `ŷ` is representative of the network's prediction (i.e. outpu
 The choice of output activation is therefore strongly connected to the type of problem being solved.
 
 ## Forward Propagation in an Image Classifier:
-self awareness 0-0 ruh roh
+Consider now the purpose of this project (repo): a neural network trained to classify handwritten digits.
+
+The input may, for example, contain 784 values, corresponding to a 28 x 28 image flattened into a vector. See the input defined below:
+
+$$
+\mathbf{x} \in ℝ^{784}
+$$
+
+The first hidden layer may contain 128 neurons:
+
+$$
+W^{(1)} \in ℝ^{128 \times 784}
+$$
+
+in turn producing:
+
+$$
+\mathbf{a}^{(1)} \in ℝ^{128}
+$$
+
+Following this, the second hidden layer (in this example) may contain 64 neurons, such that:
+
+$$
+W^{(2)} \in ℝ^{64\times128}
+$$
+
+thus producing:
+
+$$
+\mathbf{a}^{(2)} \in ℝ^{64}
+$$
+
+Finally, the output layer contains 10 neurons, one corresponding to each digit from 0 to 9, as shown:
+
+$$
+W^{(3)} \in ℝ^{10\times64}
+$$
+
+which produces:
+
+$$
+\mathbf{z}^{(3)} \in ℝ^{10}
+$$
+> note that this is pre-activation.
+
+Softmax can then convert these 10 values into probabilities:
+
+$$
+ŷ = \text{softmax}(\mathbf{z}^{(3)})
+$$
+
+An example output to explain this is shown below:
+
+$$
+ŷ =
+\begin{bmatrix}
+0.01 \\
+0.02 \\
+0.03 \\
+0.01 \\
+0.05 \\
+0.02 \\
+0.81 \\
+0.01 \\
+0.03 \\
+0.01
+\end{bmatrix}
+$$
+
+As the largest probability is associated with index 6, the network predicts that 6 is the output. In other summative words, this forward propagation has transformed the raw image itself into this prediction.
+
+## Python Implementation of Forward Propagation:
+i think... unless ive missed anything lol
