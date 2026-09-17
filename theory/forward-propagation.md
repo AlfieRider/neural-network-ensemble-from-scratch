@@ -576,4 +576,41 @@ $$
 \end{bmatrix}
 $$
 
-2nd layer next
+This final vector for the 1st Layer is then passed as input into the 2nd Layer. Suppose that:
+
+$$
+W^{(2)} =
+\begin{bmatrix}
+2 & -1
+\end{bmatrix}
+$$
+$$
+\mathbf{b}^{(2)} = 1
+$$
+
+Then the following calculation occurs:
+
+$$
+\mathbf{z}^{(2)} = W^{(2)}\mathbf{a}^{(1)} + \mathbf{b}^{(2)}
+$$
+$$
+= 2(5) - 1(3) + 1
+$$
+$$
+= 8
+$$
+> note that we are left with a 1x1 shape answer; (2x1)(1x2) = (1x1)
+
+In turn, the network has transformed the input vector into a single output value through a sequence of learned transformations, as simplified below:
+
+$$
+\begin{bmatrix}
+1 \\
+2
+\end{bmatrix}
+\rightarrow
+8
+$$
+
+## The Output Layer
+THIS IS WHERE IT GETS FUN WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO im acc so happy lol
