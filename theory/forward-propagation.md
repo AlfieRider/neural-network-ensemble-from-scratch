@@ -719,4 +719,39 @@ $$
 As the largest probability is associated with index 6, the network predicts that 6 is the output. In other summative words, this forward propagation has transformed the raw image itself into this prediction.
 
 ## Python Implementation of Forward Propagation:
-i think... unless ive missed anything lol
+This is not to be interpreted as design of the solution itself, rather an example of how this can be programmed for further conceptual understanding. Potentially can be considered as theory of the design.
+
+The expression:
+
+$$ \mathbf{z} = W\mathbf{x} + \mathbf{b} $$
+
+maps effectively directly into code via NumPy, shown below (assume import):
+
+```
+z = W @ x + b
+```
+> note: "@" is the operator for matrix multiplication here.
+
+The activation function can be just as easily applied (following the above):
+
+```
+a = relu(z)
+```
+
+A full python example is written below, for completion's sake:
+
+```
+import numpy
+
+def relu(x):
+    return np.maximum(0, x)
+
+def forwardPass(x, W, b):
+    z = W @ x + b
+    a = relu(z)
+    return a
+```
+
+## ...
+...
+
