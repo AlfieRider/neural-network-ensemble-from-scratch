@@ -774,3 +774,48 @@ Inference, as a reminder, is simply the network producing an output outside of t
 
 Forward propagation therefore does not learn anything new here, rather instead is used purely as the mechanism for using the current network state to produce an output.
 
+## Batches of Inputs:
+To introduce something new:
+
+The examples and equations above so far have been limited to considering one input at a time. In practice however, neural networks generally process multiple examples together in a batch.
+
+Suppose there exist 32 examples of input batches, each containing 3 input values. Above, this would be represented as simply:
+
+$$ \mathbf{X} \in ℝ^3 $$
+
+Instead however, the batch can be represented as a matrix, such as defined below:
+
+$$ X \in ℝ^{32 \times 3} $$
+
+where each row in turn represents one batch.
+
+Given a layer has, for demonstration's sake, 4 neurons, the weight matrix is still:
+
+$$ W \in ℝ^{4 \times 3} $$
+> one row per neuron, and 3 (input) values per (neuron) row
+
+Using the row-focussed representation:
+
+$$ XW^T $$
+
+which has dimensions of:
+
+$$ (32 \times 3)(3 \times 4) = 32 \times 4 $$
+
+i.e. the result contains four outputs for each of the 32 batches.
+> which corresponds to each of the 4 neurons' outputs in each single batch.
+> such that the result has 32 rows and 4 columns for this.
+
+The bias vector, defined as:
+
+$$ \mathbf{b} \in ℝ^4 $$
+
+is added then after to each row.
+
+A summary of this process is in the following equations:
+
+$$ Z = XW^T + \mathbf{b} $$
+$$ A = f(Z) $$
+> f is the activation function
+
+Through this approach, batches can be processed much more efficiently.
