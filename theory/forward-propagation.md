@@ -819,3 +819,27 @@ $$ A = f(Z) $$
 > f is the activation function
 
 Through this approach, batches can be processed much more efficiently.
+
+## Summary:
+Forward propagation is the process of passing an input through a neural network to produce a prediction.
+
+For an individual layer, the fundamental operation that occurs is defined as:
+
+$$ a = f(Wx + b) $$
+> composed of:
+> 1. Weighted Sum: `z = Wx`
+> 2. Added biases to ^^: `z = Wx + b`
+> 3. Applied activation function to ^^: `a = f(z)`
+
+Multiple layers repeat this process, with the output of one layer becoming the input of the next. See the below:
+
+$$ a^{(1)} = f^{(1)}(W^{(1)}x + b^{(1)}) $$
+$$ a^{(2)} = f^{(1)}(W^{(2)}a^{(1)} + b^{(2)}) $$
+> etc, continuing to the output layer.
+
+## Sources:
+go here lol ( i just want an internship for the summer plsssssssssssssssssssssssssssssss)
+
+i can work faster
+wayyy faster
+okay lock in.
