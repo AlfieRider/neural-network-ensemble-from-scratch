@@ -752,6 +752,25 @@ def forwardPass(x, W, b):
     return a
 ```
 
-## ...
-...
+## Forward Propagation in Training:
+Forward propagation naturally occurs through both training and inference. As covered in `neural-networks.md`, the training process is roughly as shown:
+
+$$ Input \rightarrow Forward Propagation \rightarrow Prediction \rightarrow Loss \rightarrow Backpropagation \rightarrow Parameter update $$
+
+The forward pass then uses the network's current weights and biases to produce a prediction, `ŷ`.
+
+As this is in **training**, the prediction `ŷ` is then compared with the expected/desired output via a loss function, such as dictated simply below:
+
+$$ L(ŷ, y) $$
+> where:
+> - `ŷ` is the network's output
+> - `y` is the expected/desired output
+> - `L` is the loss function itself
+
+It is then **back propagation** which determines how changing the network's parameters would affect this loss. Optimisation then uses the resulting gradients to update the parameters, adjusting the network closer to producing the desired output for input **x**.
+
+## Forward Propagation in Inference:
+Inference, as a reminder, is simply the network producing an output outside of training processes; once a network has been trained, forward propagation can be used on previously unseen data. In other words, the weights and biases are no longer updated.
+
+Forward propagation therefore does not learn anything new here, rather instead is used purely as the mechanism for using the current network state to produce an output.
 
