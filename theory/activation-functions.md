@@ -150,5 +150,21 @@ $$ f(7) = 7 $$
 
 Simply put, ReLU removes negative values, whilst leaving positive values unchanged.
 
-## more relu.
-...more...
+## The Derivative of ReLU
+The derivative of ReLU (`f(x)`) is shown below:
+
+$$
+f`(x) =
+\begin{cases}
+0 & x < 0 \\
+1 & x \geq 0
+\end{cases}
+$$
+> note that the case `x = 0` is not accounted for, as the function itself has a corner.
+> in implementation, a particular convention is chosen for this point.
+
+For an active ReLU neuron, the local derivative is 1, thus the gradient can pass through without being multiplied by a small derivative. Whereas for a neuron whose input is negative, the derivative is 0, such that the gradient through ReLU is also 0.
+
+This listed behaviour is a reason for ReLU being popular in gradient-based optimisations in comparison to other activation functions. More detail on this later, in `not sure yet...`.
+
+
