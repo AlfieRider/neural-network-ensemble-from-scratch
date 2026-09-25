@@ -125,3 +125,30 @@ then:
 $$ \mathbf{a} \in ℝ^4 $$
 
 The exact same also applies to when matrices process batches of example/input data (explored in `forward-propagation.md`.
+
+## ReLU:
+The Rectified Linear Unit (abbr. ReLU) is very commonly used. It is defined as simply as below:
+
+$$ f(x) = max(0, x) $$
+
+such that:
+
+$$ f(x) =
+\begin{cases}
+0 & x < 0 \\
+x & x \geq 0
+\end{cases}
+$$
+
+ReLU example cases:
+
+$$ f(-4) = 0 $$
+$$ f(-0.2) = 0 $$
+$$ f(0) = 0 $$
+$$ f(2) = 2 $$
+$$ f(7) = 7 $$
+
+Simply put, ReLU removes negative values, whilst leaving positive values unchanged.
+
+## more relu.
+...more...
