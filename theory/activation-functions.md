@@ -73,5 +73,55 @@ either mapping the input `x` to itself, or 0.
 
 Non-linearity such as this allows a network to construct increasingly complicated transformations as layers are composed/stitched/stuck together.
 
-## ehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh what next
-...
+## Note on Applying Activation Functions in Practice
+When working on an entire layer, the activation function itself is generally applied separately to each element of **z**. An example is given below:
+
+$$
+z =
+\begin{bmatrix}
+-2 \\
+3 \\
+-1 \\
+5
+\end{bmatrix}
+$$
+
+then, in this example, ReLU is applied (defined below):
+
+$$ f(x) = max(0, z) $$
+
+such that it follows:
+
+$$
+f(z) =
+\begin{bmatrix}
+f(-2) \\
+f(3) \\
+f(-1) \\
+f(5)
+\end{bmatrix}
+$$
+
+thus:
+
+$$
+\mathbf{a} =
+\begin{bmatrix}
+0 \\
+3 \\
+0 \\
+5
+\end{bmatrix}
+$$
+
+Note that the activation function has no impact on the shape of the vector;
+
+If:
+
+$$ \mathbf{z} \in ℝ^4 $$
+
+then:
+
+$$ \mathbf{a} \in ℝ^4 $$
+
+The exact same also applies to when matrices process batches of example/input data (explored in `forward-propagation.md`.
