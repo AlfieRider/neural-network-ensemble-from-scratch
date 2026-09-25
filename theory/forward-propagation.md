@@ -826,10 +826,9 @@ Forward propagation is the process of passing an input through a neural network 
 For an individual layer, the fundamental operation that occurs is defined as:
 
 $$ a = f(Wx + b) $$
-> composed of:
-> 1. Weighted Sum: `z = Wx`
-> 2. Added biases to ^^: `z = Wx + b`
-> 3. Applied activation function to ^^: `a = f(z)`
+> 1.1 Weighted Sum: `z = Wx`
+> 1.2 Added biases: `z = Wx + b`
+> 2. Applied activation function: `a = f(z)`
 
 Multiple layers repeat this process, with the output of one layer becoming the input of the next. See the below:
 
@@ -838,8 +837,8 @@ $$ a^{(2)} = f^{(1)}(W^{(2)}a^{(1)} + b^{(2)}) $$
 > etc, continuing to the output layer.
 
 ## Sources:
-go here lol ( i just want an internship for the summer plsssssssssssssssssssssssssssssss)
-
-i can work faster
-wayyy faster
-okay lock in.
+- https://cs231n.github.io/neural-networks-1/
+- https://www.geeksforgeeks.org/deep-learning/forward-propagation-in-neural-networks/
+- https://www.datacamp.com/tutorial/forward-propagation-neural-networks
+- https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/resources/lecture-33-neural-nets-and-the-learning-function
+- https://www.deeplearningbook.org/contents/mlp.html
