@@ -47,4 +47,31 @@ And this is not just limited to two layers; regardless of how many layers are ch
 Through implementation of activation functions, this property is in turn broken, such that non-linearity is introduced between layers where it otherwise would not have existed.
 
 ## Further Mathematical Point on Non-Linearity's definition:
-as it could be useful to have some more explanation
+Linearity in terms of functions is simply a function with a linear relationship, obeying the properties associated with linear transformations. Such as:
+
+$$ f(x) = 2x $$
+
+which is also visually shown below:
+
+```mermaid
+xychart-beta
+    title "Linear Function"
+    x-axis "Input" [0, 1, 2, 3, 4, 5, 6]
+    y-axis "Output" 0 --> 15
+    line [0, 2, 4, 6, 8, 10, 12]
+```
+
+Any network consisting purely of linear transformations can be ultimately collapsed/condensed into one singular linear transformation.
+
+An activation function, such as the following, is not linear:
+
+$$ f(x) = max(0, x) $$
+
+either mapping the input `x` to itself, or 0.
+> this function `f` will only an input `x` to 0 if `x < 0` (i.e. the max of the two is 0).
+> e.g. `f(-2) = 0`, whilst `f(2) = 2`.
+
+Non-linearity such as this allows a network to construct increasingly complicated transformations as layers are composed/stitched/stuck together.
+
+## ehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh what next
+...
