@@ -224,6 +224,8 @@ $$ -\infty \rightarrow 0 $$
 $$ 0 \rightarrow 0.5 $$
 $$ +\infty \rightarrow 1 $$
 
+![alt text](https://drek4537l1klr.cloudfront.net/chaudhury/Figures/CH01_F05_Chaudhury.jpg)
+
 ## Problems with Sigmoid
 The key underlying issue with sigmoid is saturation. To explain this, consider very large positive or negative inputs.
 
@@ -264,7 +266,65 @@ $$ = 0 $$
 During backpropagation, gradients are repeatedly multiplied by derivatives. In turn, if an activation contributes a very small derivative, then the gradient passing through it can become very small. This is another of many forms of the "vanishing-gradient problem".
 
 ## Tanh
-...
+The hyperbolic tangent, typically written as `tanh(x)` is another commonly known activiation function.
+
+It maps real-valued inputs to (-1, 1). It is defined as below:
+
+$$ tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}} $$
+
+- For negative infinities, tanh will tend to `-1`.
+- For 0, tanh is simply `0`.
+- For positive infinities, tanh will tend to `1`.
+> as shown here, tanh is zero-centered.
+
+With interval (-1, 1), it can have equally positive and negative numbers.
+
+![alt text](https://media.geeksforgeeks.org/wp-content/uploads/20250214171817652462/tanh.png)
+
+## Fun Similarities - Sigmoid and Tanh:
+Sigmoid and Tanh are mathematically related, shown by the below transformation:
+
+$$ tanh(x) = 2σ(2x) - 1 $$
+
+Similarities:
+- are both smooth
+- are both bounded
+- both saturate for sufficiently large + and - inputs
+- both can suffer from small gradients in their saturated regions.
+
+Their key difference is that tanh is zero centered, whereas `σ(0) = 0.5`. Additionally, due to this, tanh more closely resembles the identity function around zero (i.e. that id(x) = x).
+
+## Activation Functions & the Output Layer:
+The activation function used in a network does not necessarily have to be the same for each layer. In particular, the output layer often will have a different requirement from hidden layers.
+
+Consider a network which classifies an image into one of ten digits (self-awareness), from `0 -> 9`.
+
+The final layer may produce these ten raw values:
+
+$$
+\mathbf{z} =
+\begin{bmatrix}
+2.1 \\
+-0.7 \\
+4.8 \\
+1.2 \\
+-2.3 \\
+0.1 \\
+0.8 \\
+-1.4 \\
+0.3 \\
+0.5
+\end{bmatrix}
+$$
+
+These values are often called logits, or alternatively class scores. These themselves do not represent probabilities.
+
+For a multiclass classification problem, softmax can be applied, in turning these scores into a probability distribution.
+
+## Softmaxxing
+no way. oh my gosh. get a grip and lock in LOL
+
+
 
 
 
