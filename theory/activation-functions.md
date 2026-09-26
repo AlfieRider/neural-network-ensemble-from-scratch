@@ -204,7 +204,25 @@ rather than `0`.
 The negative side therefore has a small gradient, rather than a gradient of exactly 0.
 
 ## Sigmoid
-...
+This is also referred to as the logistic sigmoid function, defined as:
+
+$$ σ(x) = \frac{1}{1 + e^{-x}} $$
+
+mapping inputs into the following range:
+
+$$ 0 < σ(x) < 1 $$
+
+Some example values include:
+
+$$ σ(-5) \approx 0.0067 $$
+$$ σ(0) = 0.5 $$
+$$ σ(5) \approx 0.9933 $$
+
+Conceptually, to help with interpretation of the range:
+
+$$ -\infty \rightarrow 0 $$
+$$ 0 \rightarrow 0.5 $$
+$$ +\infty \rightarrow 1 $$
 
 ## Problems with Sigmoid
 ...
