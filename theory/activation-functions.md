@@ -182,5 +182,35 @@ If the neuron's parameters are subsequently updated in such a way that keeps the
 This should not however be confused: every negative value will not permanently kill a neuron. Rather, any ReLU neuron can freely switch between active and inactive states as its input changes. The problem itself arises when a neuron becomes stuck in the inactive region during training itself.
 
 ## Leaky ReLU
-Leaky ReLU is a modified version of ReLU.
+Leaky ReLU is a modified version of ReLU, aimed to address some of the already described problems with ordinary ReLU.
+
+Instead of completely removing negative values, Leaky ReLU allows a small negative output instead. It is defined below:
+
+$$
+f(X) =
+\begin{cases}
+αx & x < 0 \\
+x & x \geq 0
+\end{cases}
+$$
+> where α is a small positive constant.
+
+For example, if `α = 0.01`, then:
+
+$$ f(-5) = -0.05 $$
+
+rather than `0`.
+
+The negative side therefore has a small gradient, rather than a gradient of exactly 0.
+
+## Sigmoid
+...
+
+## Problems with Sigmoid
+...
+
+## Tanh
+...
+
+
 
