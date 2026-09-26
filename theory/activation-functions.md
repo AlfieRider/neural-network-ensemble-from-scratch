@@ -225,7 +225,43 @@ $$ 0 \rightarrow 0.5 $$
 $$ +\infty \rightarrow 1 $$
 
 ## Problems with Sigmoid
-...
+The key underlying issue with sigmoid is saturation. To explain this, consider very large positive or negative inputs.
+
+For a large positive x:
+
+$$ σ(x) \approx 1 $$
+
+For a large negative x:
+
+$$ σ(x) \approx 0 $$
+
+Thus the function becomes very flat in both regions implied/described above.
+
+On the topic of its derivative, shown below:
+
+$$ σ`(x) = σ(x)(1-σ(x)) $$
+
+Since the sigmoid output lies between 0 and 1, the derivative becomes very small when the output approaches either of these extremes.
+
+For example, if:
+
+$$ σ(x) \approx 1 $$
+
+then it naturally follows that:
+
+$$ σ`(x) \approx 1(1-1) $$
+$$ = 0 $$
+
+Similarly, given:
+
+$$ σ(x) \approx 0 $$
+
+then it naturally follows that:
+
+$$ σ`(x) \approx 0(1-0) $$
+$$ = 0 $$
+
+During backpropagation, gradients are repeatedly multiplied by derivatives. In turn, if an activation contributes a very small derivative, then the gradient passing through it can become very small. This is another of many forms of the "vanishing-gradient problem".
 
 ## Tanh
 ...
