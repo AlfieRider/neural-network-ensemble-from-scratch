@@ -167,4 +167,20 @@ For an active ReLU neuron, the local derivative is 1, thus the gradient can pass
 
 This listed behaviour is a reason for ReLU being popular in gradient-based optimisations in comparison to other activation functions. More detail on this later, in `not sure yet...`.
 
+## "Dying ReLU" Problem:
+ReLU has an overarching weakness; a kind of heavenly restriction at a push.
+
+Let z represented the summed weighted bias, and define z such that:
+
+$$ z < 0 $$
+> i.e. the case in which z from a neuron's output is always negative.
+
+Consequently, the gradient passing through said activation can become zero.
+
+If the neuron's parameters are subsequently updated in such a way that keeps the output negative for all training examples, the neuron itself effectively becomes redundant, in that it contributes nothing to the network.
+
+This should not however be confused: every negative value will not permanently kill a neuron. Rather, any ReLU neuron can freely switch between active and inactive states as its input changes. The problem itself arises when a neuron becomes stuck in the inactive region during training itself.
+
+## Leaky ReLU
+Leaky ReLU is a modified version of ReLU.
 
