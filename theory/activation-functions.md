@@ -353,10 +353,76 @@ These values are often called logits, or alternatively class scores. These thems
 
 For a multiclass classification problem, softmax can be applied, in turning these scores into a probability distribution.
 
-## Softmaxxing
-no way. oh my gosh. get a grip and lock in LOL
+## Softmax
+Softmax is defined for a vector of values. For the i-th element:
 
+$$
+softmax(\mathbf{z})_i = \frac{e^{z_i}}{\sum_{j}^{J}e^{z_j}}
+$$
+> for i = 1, 2, ..., J
 
+The result of this has two key properites:
+
+$$ 0 < softmax(z)_i < 1 $$
+
+and:
+
+$$ \sum_{i} softmax(z)_i = 1
+
+Therefore the output can be interpreted as a probability distribution over classes.
+
+For example:
+
+$$
+z =
+\begin{bmatrix}
+1 \\
+2 \\
+4
+\end{bmatrix}
+$$
+
+may produce approximately:
+
+$$
+softmax(z) =
+\begin{bmatrix}
+0.0042 \\
+0.114 \\
+0.844
+\end{bmatrix}
+
+where the largest logit corresponds to the largest probability. So a classifier such as this could thus interpret this as likelihoods of classes, such as:
+
+- Class 1: 4.2%
+- Class 2: 11.4%
+- Class 3: 84.4%
+> which sums also to 1.
+
+# Special Property of Softmax:
+Softmax is different from ordinary hidden-layer activations. ReLU, sigmoid, tanh are element-wise activations, where each value can be processed independently. For example:
+
+$$
+ReLU
+\begin{pmatrix}
+-2 \\
+3 \\
+5
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+3 \\
+5
+\end{pmatrix}
+$$
+
+The output of softmax for each element however is dependant on all of the elemtns, as every demoninator contains:
+
+$$ \sum_{j} e^{z_j} $$
+
+which in turn means that through even changing one singular value, the entire output probability can change, which makes softmax particularily useful/appropriate when the outputs represent competing classes in a multiclass classification problem.
+
+#
 
 
 
