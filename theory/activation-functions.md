@@ -163,7 +163,39 @@ $$
 > note that the case `x = 0` is not accounted for, as the function itself has a corner.
 > in implementation, a particular convention is chosen for this point.
 
-For an active ReLU neuron, the local derivative is 1, thus the gradient can pass through without being multiplied by a small derivative. Whereas for a neuron whose input is negative, the derivative is 0, such that the gradient through ReLU is also 0.
+Note that this is very similar to `Binary Step`. In fact, the derivative of ReLU above is written conventionally, where the case: 
+
+$$
+f`(x) =
+\begin{cases}
+0 & x < 0 \\
+1 & x \geq 0
+\end{cases}
+$$
+
+should mathematically instead be:
+
+$$
+f`(x) =
+\begin{cases}
+0 & x < 0 \\
+1 & x > 0
+\end{cases}
+$$
+
+thus an alternative conventional ReLU derivative definition can also instead state that:
+
+$$
+f`(x) =
+\begin{cases}
+0 & x \leq 0 \\
+1 & x > 0
+\end{cases}
+$$
+
+Mathematically, the truest derivative of ReLU is undefined at `x = 0`. The convention itself only matters if a neuron's pre-activation happens to be exactly 0.
+
+For a ReLU neuron with a positive input, the local derivative is 1, thus the gradient can pass through without being multiplied by a small derivative. Whereas for a neuron whose input is negative, the derivative is 0, such that the gradient through ReLU is also 0.
 
 This listed behaviour is a reason for ReLU being popular in gradient-based optimisations in comparison to other activation functions. More detail on this later, in `not sure yet...`.
 
