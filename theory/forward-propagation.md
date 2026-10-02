@@ -510,7 +510,7 @@ $$
 
 Each layer transforms its input into a new representation, which is then transformed by the following layer. This is why neural networks can be mathematically viewed as compositions of functions.
 
-# A Multi-Layer Process:
+## A Multi-Layer Process:
 Below is an example of how a network will function via multiple layers. This is conceptually the same as earlier in this document (and as in `mathematical-foundations.md`), however a real-value example may be worth including.
 
 Consider a network with:
