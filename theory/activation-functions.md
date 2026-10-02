@@ -367,7 +367,7 @@ $$ 0 < softmax(z)_i < 1 $$
 
 and:
 
-$$ \sum_{i} softmax(z)_i = 1
+$$ \sum_{i} softmax(z)_i = 1 $$
 
 Therefore the output can be interpreted as a probability distribution over classes.
 
@@ -391,6 +391,7 @@ softmax(z) =
 0.114 \\
 0.844
 \end{bmatrix}
+$$
 
 where the largest logit corresponds to the largest probability. So a classifier such as this could thus interpret this as likelihoods of classes, such as:
 
@@ -422,7 +423,102 @@ $$ \sum_{j} e^{z_j} $$
 
 which in turn means that through even changing one singular value, the entire output probability can change, which makes softmax particularily useful/appropriate when the outputs represent competing classes in a multiclass classification problem.
 
-#
+# Binary Classifcation & Sigmoid:
+For binary classification, only one output value is required, representing the probability of one of two classes.
+
+For example, say:
+
+$$ a = \sigma (z) $$
+
+may produce the following output:
+
+$$ a = 0.87 $$
+
+which can be in turn interpreted as an estimate probability of the positive class.
+
+Following the above, the probability of the other class is therefore defined as simply as below:
+
+$$ 1 - a $$
+
+thus:
+
+$$ P(y = 1) = 0.87 $$
+
+and in turn:
+
+$$ P(y = 1) = 0.13 $$
+
+From this example, sigmoid is proven not to be completely obsolete. Instead, Sigmoid is most useful for particular output-based tasks, especially binary probabilities. Sigmoid should be avoided for tasks where it would function as the default hidden-layer activation function.
+
+## Regression Outputs:
+Not every neural network performs classification as we aim to here.
+
+Suppose a network is trying to determine, or predict, temperature:
+
+$$ \hat{y} = 21.7 $$
+
+There is no reason for this output to be restricted to a range such as:
+
+$$ [0,1] $$
+
+or even:
+
+$$ [-1, 1] $$
+
+In any typical regression problem, the final output may in turn simply be just the raw value, i.e. the output defined such as below:
+
+$$ \hat{y} = z $$
+
+This is often referred to as a linear activation, or identity activation, as it directly reflections the functionality of the Identity function, as shown below:
+
+$$ f(x) = x $$
+
+The main takeaway from the above is that the output layer's activation depends heavily on what the network is aiming to represent or predict.
+
+## How to Choose an Activation Function
+There is often no single activation function that is correct to use, or in other words, universally appropriate. A rough guideline is given below:
+
+| Value taken by Activation Function | Activation Function Choice |
+|------------------------------------|----------------------------|
+| Hidden Layer | ReLU, or a ReLU variant |
+| Binary Output | Sigmoid |
+| Mutliclass Output | Softmax |
+| Regression Output | Identity |
+
+These are very very rough conventions, and should not be interpreted through reading of this as immutable rules. A much wider range of functions are often used in heavily designed systems.
+
+## Activation Functions & Backpropagation
+Activation functions become particularly important when backpropagation occurs. Unlike forward propagation, backpropagation does not simply calculate a value and apply an activation function. Rather, backpropagation heavily relies on determining how changes in the value of `z` per layer in turn affect the value of `a`.
+
+This requires a derivative operation, as shown:
+
+$$ \frac{da}{dz} = f'(z) $$
+
+which is why knowing the derivative of any relevant activation function is so vital.
+
+For example, ReLU's derivative is:
+
+$$ 
+f'(z) =
+\begin{cases}
+0 & z < 0 \\
+1 & z > 0
+\end{cases}
+$$
+
+and Sigmoid's derivative:
+
+$$ f'(z) = \sigma (z)(1-\sigma (z))
+
+and tanh's derivative:
+
+$$ f'(z) = 1 - tanh^{2}(z) $$
+
+Where these derivatives become part of the chain of derivatives used to calculate gradients during backpropagation. In turn, this highlights the significance of the activation functions' mathematical properties, which directly impact how easily a network can be trained.
+
+## Sources:
+ill come back to this one. sorry.
+
 
 
 
